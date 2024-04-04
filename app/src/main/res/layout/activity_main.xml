@@ -25,29 +25,44 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_height="match_parent"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp">
-
+            android:paddingRight="16dp"
+            >
             <EditText
+                android:id="@+id/nome"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
+                android:layout_height="wrap_content"
+                android:hint="Nome" />
             <EditText
+                android:id="@+id/sobrenome"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Button
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nome"
+                android:hint="Sobrenome"
+                />
+            <TextView
+                android:id="@+id/cidade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enviar Formulário" />
-        </LinearLayout>
+                android:text="Cidade: GoogleCity"
+                android:layout_below="@id/sobrenome" />
+            <TextView
+                android:id="@+id/gosto_musical"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cidade"
+                android:text="Gosto Musical"
+                />
+            <Button
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gosto_musical"
+                android:text="Enviar"/>
+
+
+        </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
